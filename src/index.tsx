@@ -13,23 +13,25 @@ export class ApivideoUploader {
   @State() status: string = 'WAIT';
   
   @Prop() token: string = 'to1R5LOYV0091XN3GQva27OS';
-  @Prop() chunkSize: number = 1000000;
+  @Prop() chunkSize: number = 1;
 
   url: string;
   player: string;
-  size: number;
-  filename: string;
   file: any;
+  filename: string;
+  size: number;
   chunks: number;
+  limit: number;
 
   connectedCallback() {
     this.url = `https://sandbox.api.video/upload?token=${this.token}`;
+    this.limit = this.chunkSize * 1000000; // chunkSize in MB
   }
 
   createChunk(start:number, id?:string) {
     this.status = 'PROGRESS';
     this.counter++;
-		const end = Math.min(start + this.chunkSize , this.size );
+		const end = Math.min(start + this.limit , this.size );
 		
     const chunk = this.file.slice(start, end);
   	const form = new FormData();
@@ -53,7 +55,7 @@ export class ApivideoUploader {
     req.onload = (event) => {
       var res = JSON.parse(req.response);
 
-      start += this.chunkSize;	
+      start += this.limit;	
       
       if (start < this.size) {
         this.createChunk(start, res.videoId);
@@ -71,7 +73,7 @@ export class ApivideoUploader {
     this.filename = this.file.name;
     this.size = this.file.size;
     
-    this.chunks = Math.ceil(this.size/this.chunkSize);
+    this.chunks = Math.ceil(this.size / this.limit);
     this.createChunk(0);
   }
 
