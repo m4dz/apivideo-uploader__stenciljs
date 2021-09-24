@@ -1,0 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  max-width: calc(100vw - 2rem);
+  width: 100%;
+  padding: 1rem;
+}
