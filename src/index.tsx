@@ -14,6 +14,7 @@ export class ApivideoUploader {
   
   @Prop() token: string = 'to1R5LOYV0091XN3GQva27OS';
   @Prop() chunkSize: number = 10;
+  @Prop() sandbox: boolean = false;
 
   url: string;
   player: string;
@@ -24,7 +25,7 @@ export class ApivideoUploader {
   limit: number;
 
   connectedCallback() {
-    this.url = `https://sandbox.api.video/upload?token=${this.token}`;
+    this.url = `https://${this.sandbox? 'sandbox' : 'ws'}.api.video/upload?token=${this.token}`;
     this.limit = this.chunkSize * 1000000; // chunkSize in MB
   }
 
