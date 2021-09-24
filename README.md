@@ -14,20 +14,24 @@ A live demo you can freely edit is available on <a href="https://webcomponents.d
 ## Usage
 
 ```html
-<av-uploader token="[api.video-user-token]" chunkSize="100"></av-uploader>
+<av-uploader token="[api.video-user-token]" chunk-size="100"></av-uploader>
 ```
 
 ## Configuration
 
 The component exposes configuration as [properties](https://stenciljs.com/docs/properties).
 
-### `token` (optional)
+### `token` (string | optional)
 
 Your *api.video* delegated token. Default: *api.video* sandbox token for demo purposes.
 
-### `chunkSize` (optional)
+### `chunk-size` (number | optional)
 
 Size of the different chunks that will be uploaded, in Mbytes. Default: `10` (`10000000` bytes). Recommended: `100`.
+
+### `sandbox` (boolean | optional)
+
+Enable a sandbox mode by passing `sandbox="true"` to your component. It enables the *sandbox* endpoint. Default: `false`.
 
 ## Links
 
