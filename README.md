@@ -14,7 +14,7 @@ A live demo you can freely edit is available on <a href="https://webcomponents.d
 ## Usage
 
 ```html
-  <av-uploader token="[api.video-user-token]" chunkSize="100"></av-uploader>
+<av-uploader token="[api.video-user-token]" chunkSize="100"></av-uploader>
 ```
 
 ## Configuration
