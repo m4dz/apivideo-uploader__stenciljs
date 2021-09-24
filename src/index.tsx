@@ -13,7 +13,7 @@ export class ApivideoUploader {
   @State() status: string = 'WAIT';
   
   @Prop() token: string = 'to1R5LOYV0091XN3GQva27OS';
-  @Prop() chunkSize: number = 1;
+  @Prop() chunkSize: number = 10;
 
   url: string;
   player: string;
