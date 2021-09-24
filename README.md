@@ -1,8 +1,6 @@
-<p align="center">
-  <a href="https://backlight.dev"><img src="https://img.shields.io/badge/Backlight.dev-Design%20System%20Editor-%23f8c307" alt="backlight.dev"></a>
-  <a href="https://webcomponents.dev"><img src="https://img.shields.io/badge/WebComponents.dev-Web%20Components%20Studio-%23459BCF" alt="webcomponents.dev"></a>
-  <a href="https://components.studio"><img src="https://img.shields.io/badge/Components.studio-Components%20Studio-%23319795" alt="components.studio"></a>
-</p>
+[![backlight.dev](https://img.shields.io/badge/Backlight.dev-Design%20System%20Editor-%23f8c307)](https://backlight.dev)
+[![webcomponents.dev](https://img.shields.io/badge/WebComponents.dev-Web%20Components%20Studio-%23459BCF)](https://webcomponents.dev)
+[![components.studio](https://img.shields.io/badge/Components.studio-Components%20Studio-%23319795)](https://components.studio)
 
 # api.video - Stencil Web Component Uploader
 
