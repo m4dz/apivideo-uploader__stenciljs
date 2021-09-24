@@ -8,4 +8,4 @@ export default {
   },
 };
 
-export const story1 = () => <av-uploader></av-uploader>;
+export const story1 = () => <av-uploader chunkSize="10"></av-uploader>;
