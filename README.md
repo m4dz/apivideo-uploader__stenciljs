@@ -27,7 +27,7 @@ Your *api.video* delegated token. Default: *api.video* sandbox token for demo pu
 
 ### `chunkSize` (optional)
 
-Size of the different chunks that will be uploaded, in Mbytes. Default: `1` (`1000000` bytes). Recommended: `100`.
+Size of the different chunks that will be uploaded, in Mbytes. Default: `10` (`10000000` bytes). Recommended: `100`.
 
 ## Links
 
