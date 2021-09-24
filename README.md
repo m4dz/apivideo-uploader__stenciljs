@@ -11,7 +11,29 @@ Based on [Uploading large files with JavaScript: File.slice() to the rescue!](ht
 
 A live demo you can freely edit is available on <a href="https://webcomponents.dev/preview/XIxGWDrNYzZCqFGZkzEr?busid=5116f450-1d2f-11ec-a43c-d13e79295681"><img src="https://img.shields.io/badge/WebComponents.dev-Web%20Components%20Studio-%23459BCF" alt="webcomponents.dev"></a>
 
+## Install
+
+### From NPM
+
+Install the package with `npm i @wcd/m4dz.apivideo-uploader`.
+
+Then import the component in your application:
+
+```js
+import "@wcd/m4dz.apivideo-uploader";
+```
+
+### In the Browser
+
+Load the component from any NPM-like CDN like [UNPKG](https://unpkg.com):
+
+```html
+<script src="https://unpkg.com/@wcd/m4dz.apivideo-uploader@0.1.0/dist/index.js"></script>
+```
+
 ## Usage
+
+Use the `<av-uploader>` tag in your markup.
 
 ```html
 <av-uploader token="[api.video-user-token]" chunk-size="100"></av-uploader>
